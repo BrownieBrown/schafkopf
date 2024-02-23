@@ -36,7 +36,6 @@ func Init(cfg models.SqliteConfig) (*Database, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer sqliteDB.Close()
 
 	err = sqliteDB.createPlayerTable()
 	if err != nil {
